@@ -1,5 +1,7 @@
 const quizContainer = document.getElementById('quiz');
 const startBtn = document.getElementById('start-btn');
+const resposta = document.getElementById('resposta');
+const pergunta = document.getElementById('questao')
 
 
 const questions = [
@@ -32,12 +34,26 @@ const questions = [
     }
   ]
 
+let shuffledQuestions, currentQuestionIndex
 
-function startQuiz(){
+startButton.addEventListener('click', startGame)
+nextButton.addEventListener('click', () => {
+  currentQuestionIndex++
+  setNextQuestion()
+})
+
+
+
+function comecarQuiz(){
     startBtn.classList.add('hide')
     quizContainer.classList.remove('hide')
+    questoesAleatorias = questions.sort(() => Math.random() - .5)
 }
 
-function setNextQuestion(){
+function mostrarQuestao(question){
+    pergunta.innerText = question.question
+}
 
+function setarProximaQuest{
+    mostrarQuestao(questoesAleatorias[])
 }
