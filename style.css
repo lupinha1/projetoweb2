@@ -64,10 +64,10 @@ body{
     background-size: 50vw 60vh;
 }
 
-.questao{
+.q{
     align-self: center;
     margin-top: 3em;
-    font-size: 1.8em;
+    font-size: 1.4em;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 15px;
 }
@@ -75,6 +75,14 @@ body{
 .respostas{
     align-self: center;
     margin-top: 3em;
+}
+
+.next-btn{
+    align-self: center;
+    background-color: #e10600;
+    border-radius: 15px;
+    margin-top: 1.6em;
+    font-size: 2.1em;
 }
 
 .resposta{
