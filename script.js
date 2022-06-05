@@ -8,11 +8,11 @@ let question1 = {
 }
 
 let question2 = {
-    q: 'Qual dessas curvas não faz parte do GP do Brasil?',
-    r1: 'Laranjinha',
-    r2: 'S do Senna',
-    r3: 'Balança',
-    r4: 'Curva do museu',
+    q: 'Quem foi o maior piloto de todos os tempos?',
+    r1: 'Ayrton Senna',
+    r2: 'Lewis Hamilton',
+    r3: 'Alain Prost',
+    r4: 'Michael Schumacher',
     rcorreta: 1
 }
 
