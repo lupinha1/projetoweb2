@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Quiz Formula 1</title>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <div class="cabecalho">
@@ -17,7 +18,9 @@
             Quão bem você connhece a Formula 1?
         </div>
 
-        <div class="quiz">
+        <div id="start-btn" class="btn-start" onclick="startQuiz()">COMEÇAR!</div>
+
+        <div id="quiz" class="hide">
             <div class="numquestao"> 1/10 </div>
             <div class="questao" id="q1"> Quem foi o maior piloto de todos os tempos?</div>
             <div class="respostas">
@@ -28,6 +31,5 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
