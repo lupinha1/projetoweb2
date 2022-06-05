@@ -4,10 +4,12 @@ const startBtn = document.getElementById('start-btn');
 
 const questions = [
     {
-      question: 'What is 2 + 2?',
+      question: 'Qual o maior piloto de todos os tempos',
       answers: [
-        { text: '4', correct: true },
-        { text: '22', correct: false }
+        { text: 'Ayrton Senna', correct: true },
+        { text: 'Alain Prost', correct: false },
+        { text: 'Lewis Hamilton', correct: false },
+        { text: 'Michael Schumacher', correct: false }
       ]
     },
     {
@@ -26,13 +28,6 @@ const questions = [
         { text: 'YES!!!', correct: true },
         { text: 'Um no', correct: false },
         { text: 'IDK', correct: false }
-      ]
-    },
-    {
-      question: 'What is 4 * 2?',
-      answers: [
-        { text: '6', correct: false },
-        { text: '8', correct: true }
       ]
     }
   ]
