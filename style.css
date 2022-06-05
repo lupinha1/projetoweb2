@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'f1';
+    src: url('f1font.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    font-family: f1;
+}
+
+.cabecalho{
+    margin-top: 1.6em;
+    background-color: #e10600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100vw;
+}
+
+.cabecalho img{
+    width: 15%;
+}
+
+.conteudo{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    font-size: 2em;
+}
+
+.quiz{
+    margin-top: 5vh;
+    width: 50vw;
+    height: 60vh;
+    background-color: #e10600;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-image: url("imagem2.jpg");
+    background-size: 50vw 60vh;
+}
+
+.numquestao{
+    align-self: flex-start;
+    margin: 0.7em 0 0 0.7em;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 3em;
+    height: 1.5em;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+}
+
+.questao{
+    align-self: center;
+    margin-top: 3em;
+    font-size: 1.8em;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+}
+
+.respostas{
+    align-self: center;
+    margin-top: 3em;
+}
+
+.resposta{
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    border: 1px solid white;
+    height: 2em;
+    width: 30em;
+    background-color: rgba(51, 49, 49, 0.5);
+}
+
+
+  
