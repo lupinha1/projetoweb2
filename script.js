@@ -13,21 +13,21 @@ const questions = [
       ]
     },
     {
-      question: 'Who is the best YouTuber?',
+      question: 'Qual dessas curvas não faz parte do GP Brasil',
       answers: [
-        { text: 'Web Dev Simplified', correct: true },
-        { text: 'Traversy Media', correct: true },
-        { text: 'Dev Ed', correct: true },
-        { text: 'Fun Fun Function', correct: true }
+        { text: 'Curva do Balão', correct: true },
+        { text: 'Curva da Balança', correct: false },
+        { text: 'Laranjinha', correct: false },
+        { text: 'S do Senna', correct: false }
       ]
     },
     {
-      question: 'Is web development fun?',
+      question: 'Qual o maior circuito já utilizado pela F1?',
       answers: [
-        { text: 'Kinda', correct: false },
-        { text: 'YES!!!', correct: true },
-        { text: 'Um no', correct: false },
-        { text: 'IDK', correct: false }
+        { text: 'Pescara', correct: false },
+        { text: 'Spa Francorchamps', correct: true },
+        { text: 'Nurburgring Nordshcleife', correct: false },
+        { text: 'SEI LÁ', correct: false }
       ]
     }
   ]
@@ -36,4 +36,8 @@ const questions = [
 function startQuiz(){
     startBtn.classList.add('hide')
     quizContainer.classList.remove('hide')
+}
+
+function setNextQuestion(){
+
 }
