@@ -17,13 +17,14 @@ let questoesAleatorias, questaoAtual
 let acertos = 0;
 
 
-
+//botão start chama a função comecarquiz
 startBtn.addEventListener('click', comecarQuiz);
 nextBtn.addEventListener('click', () => {
     questaoAtual++
-    if(questaoAtual != 9)
+    if(questaoAtual <=9)
         setarProxQuestao()
     else{
+        nextBtn.classList.add('hide')
         endBtn.classList.remove('hide')
         endBtn.classList.add('next-btn')
         endBtn.addEventListener('click', () => {
@@ -32,7 +33,7 @@ nextBtn.addEventListener('click', () => {
             jogardnv.classList.remove('hide')
             jogardnv.classList.add('jogar-dnv')
             jogardnv.innerText = 'JOGAR NOVAMENTE'
-            resultadofinal.innerText = `Você acertou ${acertos} questões, parabéns!`
+            resultadofinal.innerText = `Você acertou ${acertos}/10 questões, parabéns!`
             jogardnv.addEventListener('click', () =>{
                 window.location.reload();
             })
@@ -40,6 +41,7 @@ nextBtn.addEventListener('click', () => {
     }
   })
 
+//esta função esconde o botão iniciar e mostra o container do quiz, além de pegar o primeiro objeto do array questoes e chama a função setar prox questão
 function comecarQuiz(){
     startBtn.classList.add('hide')  
     quizContainer.classList.remove('hide')
@@ -48,11 +50,14 @@ function comecarQuiz(){
     setarProxQuestao();
 }  
 
+//esta função chama a função mostrarQuestao passando como parâmetro o primeiro objeto do array definido em comecarQuiz
 function setarProxQuestao(){
     mostrarQuestao(questoesAleatorias[questaoAtual])
-    imagem
 }
 
+//esta função recebe o objeto, mapeia a pergunta e as respostas em seus respectivos lugares obtidos pelo ID no html
+// e também contabiliza os acertos, e faz as chamadas de função anônima quando o usuário clica na alternativa desejada.
+//DETALHE OS ALERTS ESTÃO COMENTADOS PELO ERRO EXPLICADO EM SALA, ONDE ELES SE REPETIAM A CADA QUESTÃO, PORÉM A FUNCIONALIDADE DE EXIBIR SE ACERTOU OU ERROU ESTÁ CONTIDA NELES.
 function mostrarQuestao(questao){
     pergunta.innerText = questao.question;
     resposta1.innerText = questao.text1;
@@ -61,17 +66,17 @@ function mostrarQuestao(questao){
     resposta4.innerText = questao.text4;
     let rc = (questao.rc);
     let rctexto = `A resposta correta é a ${rc}`;
-
+    
     let a = 0;
 
     resposta1.addEventListener('click', () => {
         a = resposta1.id;
         if(parseInt(a) === rc){
-            alert('Você acertou!')
+            //alert('Você acertou!')
             acertos++
         }
         else{
-            alert((rctexto))
+            //alert((rctexto))
         }
         rc = 0;
     })
@@ -79,11 +84,11 @@ function mostrarQuestao(questao){
     resposta2.addEventListener('click', () => {
         a = resposta2.id;
         if(parseInt(a) === rc){
-            alert('Você acertou!')
+            //alert('Você acertou!')
             acertos++
         }
         else{
-            alert((rctexto))
+           // alert((rctexto))
         }
         rc = 0;
     })
@@ -91,11 +96,11 @@ function mostrarQuestao(questao){
     resposta3.addEventListener('click', () => {
         a = resposta3.id;
         if(parseInt(a) === rc){
-            alert('Você acertou!')
+            //alert('Você acertou!')
             acertos++
         }
         else{
-            alert((rctexto))
+            //alert((rctexto))
         }
         rc = 0;
     })
@@ -103,17 +108,19 @@ function mostrarQuestao(questao){
     resposta4.addEventListener('click', () => {
         a = resposta4.id;
         if(parseInt(a) === rc){
-            alert('Você acertou!')
+            //alert('Você acertou!')
             acertos++
         }
         else{
-            alert((rctexto))
+            //alert((rctexto))
         }
         rc = 0;
     })
+
     
 }
 
+//Um array de objetos que contem as perguntas.
 const questions = [
     {
         question: 'Qual o maior piloto de todos os tempos',
@@ -169,7 +176,7 @@ const questions = [
         rc: 4
       },
       {
-        question: 'Em qual equipe Rubinho correu ao lado de Michael Schumacher?',
+        question: 'Em qual equipe Rubinho correu junto de Schumacher?',
         text1: '1. Mclaren',
         text2: '2. Williams',
         text3: '3. Mercedes',
