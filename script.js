@@ -64,6 +64,7 @@ function mostrarQuestao(questao){
         else{
             alert((rctexto))
         }
+        rc = 0;
     })
 
     resposta2.addEventListener('click', () => {
@@ -75,7 +76,7 @@ function mostrarQuestao(questao){
         else{
             alert((rctexto))
         }
-        
+        rc = 0;
     })
 
     resposta3.addEventListener('click', () => {
@@ -87,7 +88,7 @@ function mostrarQuestao(questao){
         else{
             alert((rctexto))
         }
-        
+        rc = 0;
     })
 
     resposta4.addEventListener('click', () => {
@@ -99,7 +100,7 @@ function mostrarQuestao(questao){
         else{
             alert((rctexto))
         }
-        
+        rc = 0;
     })
     
 }
