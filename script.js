@@ -3,6 +3,8 @@ const startBtn = document.getElementById('start-btn');
 const resultadofinal = document.getElementById('resultado-final')
 const endBtn = document.getElementById('end')
 const nextBtn = document.getElementById('next-bt')
+const imagem = document.getElementById('img')
+const jogardnv = document.getElementById('jogar-novamente')
 const pergunta = document.getElementById('questao')
 const resposta1 = document.getElementById('1')
 const resposta2 = document.getElementById('2')
@@ -27,7 +29,13 @@ nextBtn.addEventListener('click', () => {
         endBtn.addEventListener('click', () => {
             quizContainer.classList.add('hide')
             resultadofinal.classList.remove('hide')
+            jogardnv.classList.remove('hide')
+            jogardnv.classList.add('jogar-dnv')
+            jogardnv.innerText = 'JOGAR NOVAMENTE'
             resultadofinal.innerText = `Você acertou ${acertos} questões, parabéns!`
+            jogardnv.addEventListener('click', () =>{
+                window.location.reload();
+            })
         })
     }
   })
@@ -42,6 +50,7 @@ function comecarQuiz(){
 
 function setarProxQuestao(){
     mostrarQuestao(questoesAleatorias[questaoAtual])
+    imagem
 }
 
 function mostrarQuestao(questao){
@@ -104,13 +113,6 @@ function mostrarQuestao(questao){
     })
     
 }
-
-
-
-
-
-
-
 
 const questions = [
     {
